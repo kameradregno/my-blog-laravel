@@ -36,8 +36,8 @@
             <div class="card-body">
                 <h5 class="card-title" style="font-family:'itc avant garde gothic', monospace">{{ $p->title }}</h5>
                 <p class="card-text" style="font-family:'sf pro', monospace">{{ $p->content }}</p>
-                <p class="card-text" style="font-family:'clarendon-regular', monospace"><small class="text-muted">Created At
-                        {{ date("d M Y H:i", strtotime($p->created_at)) }}
+                <p class="card-text" style="font-family:'clarendon-regular', monospace"><small class="text-muted">Created
+                        {{ date("d M Y, H:i", strtotime($p->created_at)) }}
                     </small> </p>
                 <a href="{{ url("posts/$p->id") }}" class="btn btn-primary" style="font-family:'Futura LT', monospace">Selengkapnya</a>
                 <a href="{{ url("posts/$p->id/edit") }}" class="btn btn-warning" style="font-family:'Futura LT', monospace">Edit</a>
