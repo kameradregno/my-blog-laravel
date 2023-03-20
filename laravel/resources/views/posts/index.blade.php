@@ -7,6 +7,8 @@
     <link href="{{ asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+       
+
     <style>
         .body {
             padding: 6px;
@@ -21,13 +23,42 @@
 
 <body>
 
-    <div class="container my-4">
-        <h1 style="font-family:'deathshead 3D', monospace">
-            Blog-Ana <a href="{{ url('posts/create') }}" class="btn btn-warning mx-3" style="font-family:'pricedown', monospace">+ Buat Post</a>
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <span class="fs-2" style="color: white; font-family: Deathshead;">Blog-Ana</span>
+        </a>
 
-            <a href="{{ url('posts/trash') }}" class="btn btn-danger" style="font-family:'pricedown', monospace">Riwayat Hapus</a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mx-4">
+          <li><a href="#" class="nav-link px-2 text-secondary" style="font-family:'product sans', monospace">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" style="font-family:'product sans', monospace">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" style="font-family:'product sans', monospace">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" style="font-family:'product sans', monospace">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" style="font-family:'product sans', monospace">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div class="container my-4">
+        
+    
+        <a href="{{ url('posts/create') }}" class="btn btn-warning mx-3  mb-4" style="font-family:'pricedown', monospace">+ Buat Post</a>
+
+        <a href="{{ url('posts/trash') }}" class="btn btn-danger mb-4" style="font-family:'pricedown', monospace">Riwayat Hapus</a>
             
-        </h1>
+       
+        
         <p class="text-muted" style="font-family:'product sans', monospace">Total Postingan Aktif : <span class="badge bg-success">{{ $total_active }}</span>   Total postingan non Aktif : <span class="badge bg-warning">{{ $total_nonactive }}</span>   Total postingan dihapus : <span class="badge bg-danger">{{ $total_dihapus }}</span> </p>
 
         @foreach($posts as $p)
@@ -47,6 +78,17 @@
         @endforeach
 
     </div>
+
+    <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
 
 
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"
