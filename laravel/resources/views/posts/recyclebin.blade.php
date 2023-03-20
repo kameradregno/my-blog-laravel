@@ -21,10 +21,19 @@
 
 <body>
 
-    <div class="container my-4">
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="{{ url('posts/create') }}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <span class="fs-2" style="color: white; font-family:'deathshead 3d', monospace;">Blog-Ana</span>
+        </a>
+        <a href="{{ url('posts') }}" class="btn btn-outline-light me-2 mx-3" style="font-family:'deathshead halftone', monospace">Kembali</a>    
+</header>
+
+    <!-- <div class="container my-4">
         <h1 style="font-family:'deathshead 3D', monospace">
-            Blog-Ana <a href="{{ url('posts') }}" class="btn btn-success mx-3" style="font-family:'pricedown', monospace">Kembali</a>
-        </h1>
+            Blog-Ana <a href="{{ url('posts') }}" class="btn btn-success mx-3" style="font-family:'pricedown', monospace"></a>
+        </h1> -->
 
         @foreach($posts as $p)
 

@@ -12,10 +12,17 @@
 
 <body>
 
+<header class="p-3 text-bg-dark">
     <div class="container">
-        <h1 class="my-4" style="font-family:deathshead">Buat Post Baru</h1>
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="{{ url('posts/create') }}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <span class="fs-2" style="color: white; font-family:'deathshead 3d', monospace;">Buat Post Baru</span>
+        </a>
+</header>
 
-        <form method="post" action="{{ url('posts') }}">
+    <div class="container">
+
+        <form method="post" action="{{ url('posts') }}" class="mt-5">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Judul</label>
