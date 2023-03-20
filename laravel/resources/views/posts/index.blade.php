@@ -39,8 +39,8 @@
                 <p class="card-text" style="font-family:'clarendon-regular', monospace"><small class="text-muted">Created
                         {{ date("d M Y, H:i", strtotime($p->created_at)) }}
                     </small> </p>
-                <a href="{{ url("posts/$p->id") }}" class="btn btn-primary" style="font-family:'Futura LT', monospace">Selengkapnya</a>
-                <a href="{{ url("posts/$p->id/edit") }}" class="btn btn-warning" style="font-family:'Futura LT', monospace">Edit</a>
+                <a href="{{ url("posts/$p->slug") }}" class="btn btn-primary" style="font-family:'Futura LT', monospace">Selengkapnya</a>
+                <a href="{{ url("posts/$p->slug/edit") }}" class="btn btn-warning" style="font-family:'Futura LT', monospace">Edit</a>
             </div>
         </div>
 

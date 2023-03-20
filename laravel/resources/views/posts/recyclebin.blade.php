@@ -41,7 +41,7 @@
                 @method('DELETE')
                 @csrf
     
-                <button type="submit"class="btn btn-primary my-4" style="font-family:'pricedown', monospace">Hapus Permanen</button>
+                <button type="submit"class="btn btn-danger my-2" style="font-family:'pricedown', monospace">Hapus Permanen</button>
     
             </form>
 

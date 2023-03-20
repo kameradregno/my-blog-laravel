@@ -18,7 +18,7 @@
     <div class="container">
         <h1 class="my-4" style="font-family:deathshead">Edit Postingan</h1>
 
-        <form method="post" action="{{ url("posts/$post->id") }}">
+        <form method="post" action="{{ url("posts/$post->slug") }}">
             @method('patch')
             @csrf
             <div class="mb-3">
