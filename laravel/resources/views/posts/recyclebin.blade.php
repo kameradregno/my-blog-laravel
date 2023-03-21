@@ -1,34 +1,8 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-    <title>Blog</title>
+@section('title', "Riwayat")
 
-    <link href="{{ asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <style>
-        .body {
-            padding: 6px;
-            border-bottom: 2px solid red;
-        }
-
-        span {
-            color: aqua;
-        }
-    </style>
-</head>
-
-<body>
-
-<header class="p-3 text-bg-dark">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="{{ url('posts/create') }}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <span class="fs-2" style="color: white; font-family:'deathshead 3d', monospace;">Blog-Ana</span>
-        </a>
-        <a href="{{ url('posts') }}" class="btn btn-outline-light me-2 mx-3" style="font-family:'deathshead halftone', monospace">Kembali</a>    
-</header>
+@section('content')
 
     <!-- <div class="container my-4">
         <h1 style="font-family:'deathshead 3D', monospace">
@@ -68,12 +42,4 @@
 
     </div>
 
-
-
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-</body>
-</body>
-
-</html>
+@endsection

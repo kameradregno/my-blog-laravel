@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-    <title>{{ $post->title }}</title>
+@section('title', "$post->title")
 
-    <!-- css bootstrap local -->
-    <link href="{{ asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <!-- self css -->
-    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
-
-
-</head>
-
-<body>
-
-    <div class="container">
+@section('content')
 
         <article class="blog-post mt-5">
             <h2 class="blog-post-title mb-1" style="font-family:deathshead">{{ $post->title }}</h2>
@@ -38,10 +25,4 @@
     </div>
 
 
-    <!-- javascript bootstrap local -->
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-
-</body>
-
-</html>
+@endsection

@@ -1,22 +1,10 @@
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<html lang="en">
+@section('title', "Edit Blog")
 
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Postingan</title>
-
-    <link href="{{ asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-</head>
-
-<body>
-
-
+@section('content')
 
     <div class="container">
-        <h1 class="my-4" style="font-family:deathshead">Edit Postingan</h1>
 
         <form method="post" action="{{ url("posts/$post->slug") }}">
             @method('patch')
@@ -50,9 +38,4 @@
     </div>
 
 
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+    @endsection
