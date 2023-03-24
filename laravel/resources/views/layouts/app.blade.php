@@ -16,12 +16,13 @@
 
 <body>
 
+  @include('layouts.app.header')
 
    <div class="container my-4">
 
     @yield('content')
 
-    
+  @include('layouts.app.footer')
 
   </div>
 
