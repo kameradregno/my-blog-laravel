@@ -13,9 +13,9 @@
 
         <div class="card my-4">
             <div class="card-body">
-                <h5 class="card-title" style="font-family:'itc avant garde gothic', monospace">{{ $p->title }}</h5>
-                <p class="card-text" style="font-family:'sf pro', monospace">{{ $p->content }}</p>
-                <p class="card-text" style="font-family:'clarendon-regular', monospace"><small class="text-muted">Created At
+                <h5 class="card-title" style="font-family:'deathshead', monospace">{{ $p->title }}</h5>
+                <p class="card-text" style="font-family:'futura-book', monospace">{{ $p->content }}</p>
+                <p class="card-text" style="font-family:'futura-book', monospace"><small class="text-muted">Created At
                         {{ date("d M Y H:i", strtotime($p->created_at)) }}
                     </small> </p>
 
@@ -24,7 +24,7 @@
                 @method('DELETE')
                 @csrf
     
-                <button type="submit"class="btn btn-danger my-2" style="font-family:'pricedown', monospace">Hapus Permanen</button>
+                <button type="submit"class="btn btn-danger my-2" style="font-family:'futura-book', monospace">Hapus Permanen</button>
     
             </form>
 
@@ -32,7 +32,7 @@
                 @method('DELETE')
                 @csrf
     
-                <button type="submit"class="btn btn-warning my-4" style="font-family:'pricedown', monospace">Pulihkan</button>
+                <button type="submit"class="btn btn-warning my-4" style="font-family:'futura-book', monospace">Pulihkan</button>
     
             </form>
             </div>

@@ -17,11 +17,11 @@
             <div class="card-body">
                 <h5 class="card-title fs-2" style="font-family:'deathshead', monospace">{{ $p->title }}</h5>
                 <p class="card-text" style="font-family:'Futura-Book', sans-serif">{{ $p->content }}</p>
-                <p class="card-text" style="font-family:'clarendon-regular', monospace"><small class="text-muted">Created
+                <p class="card-text" style="font-family:'futura-book', monospace"><small class="text-muted">Created
                         {{ date("d M Y, H:i", strtotime($p->created_at)) }}
                     </small> </p>
-                <a href="{{ url("posts/$p->slug") }}" class="btn btn-primary" style="font-family:'Futura LT', monospace">Selengkapnya</a>
-                <a href="{{ url("posts/$p->slug/edit") }}" class="btn btn-warning" style="font-family:'Futura LT', monospace">Edit</a>
+                <a href="{{ url("posts/$p->slug") }}" class="btn btn-primary" style="font-family:'futura-book', monospace">Selengkapnya</a>
+                <a href="{{ url("posts/$p->slug/edit") }}" class="btn btn-warning" style="font-family:'futura-book', monospace">Edit</a>
             </div>
         </div>
 

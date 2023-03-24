@@ -17,8 +17,8 @@
         </form> -->
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2" style="font-family:'deathshead halftone', monospace">Login</button>
-          <!-- <button type="button" class="btn btn-warning" style="font-family:'deathshead halftone', monospace"">Sign-up</button> -->
+          <a href="{{ url("login") }}"  class="btn btn-outline-light me-2" style="font-family:'futura-book', monospace">Login</a>
+          <button type="button" class="btn btn-warning" style="font-family:'futura-book', monospace"">Sign-up</button>
         </div>
       </div>
     </div>

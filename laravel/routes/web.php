@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\PostController;
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,15 +21,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('hai', function () {
-//     echo "Hai";
-// });
-
-// Route::get('hello', 'App\Http\Controllers\HelloController@index');
-
-// Route::get('welcome', [HelloController::class, 'welcome']);
-
-// Route::resource('posts', PostController::class);
+Route::get('login', [AuthController::class, 'login']);
+Route::post('login', [AuthController::class, 'authenticate']);
 
 Route::get('posts', [PostController::class, 'index']);
 
@@ -49,4 +44,12 @@ Route::delete('posts/{slug}/permanent', [PostController::class, 'permanent_delet
 
 Route::delete('posts/{slug}/restore', [PostController::class, 'restore']);
 
+// Route::get('hai', function () {
+//     echo "Hai";
+// });
 
+// Route::get('hello', 'App\Http\Controllers\HelloController@index');
+
+// Route::get('welcome', [HelloController::class, 'welcome']);
+
+// Route::resource('posts', PostController::class);
