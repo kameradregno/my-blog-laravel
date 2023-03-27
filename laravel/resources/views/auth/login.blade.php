@@ -17,6 +17,10 @@
             <div class="alert alert-danger" style="font-family:'futura-book', monospace">{{ session()->get('error_message')  }}</div>
       @endif      
 
+      @if (session()->has('error_msg'))
+            <div class="alert alert-warning" style="font-family:'futura-book', monospace">{{ session()->get('error_msg')  }}</div>
+      @endif      
+
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label" style="font-family:'futura-book', monospace">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" name="email" style="font-family:'futura-book', monospace">
