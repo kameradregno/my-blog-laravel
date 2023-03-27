@@ -6,14 +6,15 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mx-4">
-        @if(Request::path() == 'login')
-        <li class="nav-item"><a href="#" class="nav-link text-muted">Buat Post</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-muted">Riwayat Hapus</a></li>
-        @else
+        @if(Request::path() == 'login' || Request::is('posts/*'))
+        @php $hide = true; @endphp
+        @endif
+        @if(!isset($hide))
         <li class="nav-item"><a href="{{ url('posts/create') }}" class="nav-link px-2 text-white fs-4" style="font-family:'deathshead laser', monospace">Buat Post</a></li>
         <li class="nav-item"><a href="{{ url('posts/trash') }}" class="nav-link px-2 text-white fs-4" style="font-family:'deathshead laser', monospace">Riwayat Hapus</a></li>
         @endif
         </ul>
+
 
         
         @if(Request::path() != 'login')
