@@ -32,6 +32,7 @@
         @if (!Auth::check())
           <a href="{{ url("login") }}"  class="btn btn-outline-light me-2" style="font-family:'futura-book', monospace">Login</a>
         @else()
+          <button type="button"  class="btn" style="color: white; background-color: black !important; border-color: white !important; font-family:'futura-book', monospace">{{ Auth::user()->name }}</button>
           <a href="{{ url("logout") }}"class="btn btn-warning" style="font-family:'futura-book', monospace"">Logout</a>
         @endif
         </div>
