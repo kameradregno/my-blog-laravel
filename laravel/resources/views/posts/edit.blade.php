@@ -32,7 +32,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Apakah anda yakin ingin menghapus postingan <span class="fw-bold text-danger">"{{ $post->title }}"?</span></p>
+        <p style="font-family:'futura-book', monospace">Apakah anda yakin ingin menghapus postingan <span class="fw-bold text-danger">"{{ $post->title }}"?</span></p>
       </div>
       <div class="modal-footer">
       
@@ -40,8 +40,8 @@
                 @method('DELETE')
                 @csrf
     
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-family:'deathshead', monospace">Tidak</button>
-            <button type="submit" class="btn btn-danger" style="font-family:'deathshead', monospace">Ya</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-family:'futura-book', monospace">Tidak</button>
+            <button type="submit" class="btn btn-danger" style="font-family:'futura-book', monospace">Ya</button>
         </form>
       
        </div>
