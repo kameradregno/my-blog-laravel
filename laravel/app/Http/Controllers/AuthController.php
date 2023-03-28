@@ -52,11 +52,11 @@ class AuthController extends Controller
     public function register(Request $request)
     {
 
-         $request->validate([
+        $request->validate([
             'name' => 'min:3',
             'email' => 'email|unique:users',
             'password' => 'min:4|max:6|confirmed'
-         ]);
+        ]);
 
 
     }
