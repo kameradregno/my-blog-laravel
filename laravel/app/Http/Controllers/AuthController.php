@@ -32,27 +32,30 @@ class AuthController extends Controller
         }
     }
 
-    public function logout() {
+    public function logout()
+    {
 
         Session::flush();
         Auth::logout();
 
-        return redirect('login')->with('error_msg', 'Anda sudah logout, silahkan login kembali'); 
+        return redirect('login')->with('error_msg', 'Anda sudah logout, silahkan login kembali');
 
     }
-    
-    public function register_form(){
+
+    public function register_form()
+    {
 
         return view('auth.register');
 
     }
 
-    public function register(){
+    public function register()
+    {
 
-        
+
 
 
     }
 
-    
+
 }

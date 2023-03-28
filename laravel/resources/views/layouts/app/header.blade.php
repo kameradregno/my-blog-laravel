@@ -6,7 +6,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mx-4">
-        @if(Request::path() == 'login' || Request::is('posts/*'))
+        @if(Request::path() == 'login' || Request::is('posts/*') || Request::path() == 'register')
         @php $hide = true; @endphp
         @endif
         @if(!isset($hide))
