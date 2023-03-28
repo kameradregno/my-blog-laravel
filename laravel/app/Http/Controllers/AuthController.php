@@ -28,7 +28,7 @@ class AuthController extends Controller
         if (Auth::attempt($credential)) {
             return redirect('posts');
         } else {
-            return redirect('login')->with('error_message', 'Incorrect email or password');
+            return redirect('login')->with('error_message', 'Email atau password salah');
         }
     }
 
@@ -37,7 +37,20 @@ class AuthController extends Controller
         Session::flush();
         Auth::logout();
 
-        return redirect('login')->with('error_msg', 'You have been logged out, please log in again');
+        return redirect('login')->with('error_msg', 'Anda sudah logout, silahkan login kembali'); 
+
+    }
+    
+    public function register_form(){
+
+        return view('auth.register');
+
+    }
+
+    public function register(){
+
+        
+
 
     }
 
