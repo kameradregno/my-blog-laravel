@@ -34,7 +34,7 @@
                                 style="font-family:'futura-book', monospace">Alamat email</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" name="email"
                                 style="font-family:'futura-book', monospace">
-                            @if ($errors->has('name'))
+                            @if ($errors->has('email'))
                                 <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('email') }}</small>
                             @endif
                         </div>
