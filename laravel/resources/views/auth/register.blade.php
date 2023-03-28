@@ -43,6 +43,9 @@
                             <label for="exampleInputPassword1" class="form-label"
                                 style="font-family:'futura-book', monospace">Kata sandi</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                            @if ($errors->has('name'))
+                                <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
+                            @endif
                         </div>
 
                         <div class="mb-3">
@@ -50,9 +53,7 @@
                                 style="font-family:'futura-book', monospace">Konfirmasi kata sandi</label>
                             <input type="password" class="form-control" id="password_confirmation"
                                 name="password_confirmation">
-                            @if ($errors->has('name'))
-                                <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
-                            @endif
+
                         </div>
 
                         <div class="text-center">
