@@ -24,7 +24,8 @@
                             <input type="text" class="form-control" id="name"
                                 style="font-family:'futura-book', monospace" name="name" value="{{ old('name') }}">
                             @if ($errors->has('name'))
-                                <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
+                                <small class="text-danger"
+                                    style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
                             @endif
                         </div>
 
@@ -35,7 +36,8 @@
                             <input type="email" class="form-control" id="exampleInputEmail1" name="email"
                                 style="font-family:'futura-book', monospace">
                             @if ($errors->has('email'))
-                                <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('email') }}</small>
+                                <small class="text-danger"
+                                    style="font-family:'futura-book', monospace">{{ $errors->first('email') }}</small>
                             @endif
                         </div>
 
@@ -44,7 +46,8 @@
                                 style="font-family:'futura-book', monospace">Kata sandi</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                             @if ($errors->has('name'))
-                                <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
+                                <small class="text-danger"
+                                    style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
                             @endif
                         </div>
 
