@@ -21,8 +21,8 @@
                         <div class="mb-3">
                             <label for="name" class="form-label"
                                 style="font-family:'futura-book', monospace">Nama</label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                style="font-family:'futura-book', monospace">
+                            <input type="text" class="form-control" id="name"
+                                style="font-family:'futura-book', monospace" name="name" value="{{ old('name') }}">
                             @if ($errors->has('name'))
                                 <small class="text-danger" style="font-family:'futura-book', monospace">{{ $errors->first('name') }}</small>
                             @endif
