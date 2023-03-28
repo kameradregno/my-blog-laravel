@@ -21,7 +21,7 @@
                 @php $hide = true; @endphp
             @endif
             @if (!isset($hide))
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg" role="search">
                     <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search" style="font-family:'deathshead outline', monospace">
                 </form>
             @endif
@@ -34,7 +34,8 @@
                     <a href="{{ url('login') }}" class="btn btn-outline-light me-2" style="font-family:'futura-book', monospace">Login</a>
                     <a href="{{ url('register') }}" class="btn btn-outline-warning me-2" style="font-family:'futura-book', monospace">Register</a>
                 @else()
-                    <button type="button" class="btn" style="color: white; background-color: black !important; border-color: white !important; font-family:'futura-book', monospace">{{ Auth::user()->name }}</button>
+                    <a class="me-4" style="color: white; border-color: white !important; font-family:'futura-book', monospace"><img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt=""
+              class="img-fluid me-2" style="max-width: 14%;">{{ Auth::user()->name }}</a>
                     <a href="{{ url('logout') }}"class="btn btn-warning" style="font-family:'futura-book', monospace">Logout</a>
                 @endif
             </div>
