@@ -7,4 +7,4 @@
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
     </ul>
     <p class="text-center text-muted" style="font-family:'deathshead', monospace">Blog-Ana</p>
-  </footer>
+</footer>
