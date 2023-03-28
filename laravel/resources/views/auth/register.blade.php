@@ -30,7 +30,7 @@
         </div>
         <div class="mb-3">
             <label for="password_confirmation" class="form-label" style="font-family:'futura-book', monospace">Konfirmasi kata sandi</label>
-            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" style="font-family:'futura-book', monospace">
+            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-warning" style="font-family:'futura-book', monospace">Daftar</button>
