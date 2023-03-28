@@ -12,7 +12,7 @@
     @foreach ($posts as $p)
         <div class="card my-4">
             <div class="card-body">
-                <h5 class="card-title" style="font-family:'deathshead', monospace">{{ $p->title }}</h5>
+                <h5 class="card-title fs-2" style="font-family:'deathshead', monospace">{{ $p->title }}</h5>
                 <p class="card-text" style="font-family:'futura-book', monospace">{{ $p->content }}</p>
                 <p class="card-text" style="font-family:'futura-book', monospace"><small class="text-muted">Created At
                         {{ date('d M Y H:i', strtotime($p->created_at)) }}
