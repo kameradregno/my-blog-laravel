@@ -11,10 +11,8 @@
                     @php $hide = true; @endphp
                 @endif
                 @if (!isset($hide))
-                    <li class="nav-item"><a href="{{ url('posts/create') }}" class="nav-link px-2 text-white fs-4"
-                            style="font-family:'deathshead laser', monospace">Buat Post</a></li>
-                    <li class="nav-item"><a href="{{ url('posts/trash') }}" class="nav-link px-2 text-white fs-4"
-                            style="font-family:'deathshead laser', monospace">Riwayat Hapus</a></li>
+                    <li class="nav-item"><a href="{{ url('posts/create') }}" class="nav-link px-2 text-white fs-4" style="font-family:'deathshead laser', monospace">Buat Post</a></li>
+                    <li class="nav-item"><a href="{{ url('posts/trash') }}" class="nav-link px-2 text-white fs-4" style="font-family:'deathshead laser', monospace">Riwayat Hapus</a></li>
                 @endif
             </ul>
 
@@ -24,8 +22,7 @@
             @endif
             @if (!isset($hide))
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
-                        aria-label="Search" style="font-family:'deathshead outline', monospace">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search" style="font-family:'deathshead outline', monospace">
                 </form>
             @endif
 
@@ -34,15 +31,11 @@
 
             <div class="text-end">
                 @if (!Auth::check())
-                    <a href="{{ url('login') }}" class="btn btn-outline-light me-2"
-                        style="font-family:'futura-book', monospace">Login</a>
-                    <a href="{{ url('register') }}" class="btn btn-outline-warning me-2"
-                        style="font-family:'futura-book', monospace">Register</a>
+                    <a href="{{ url('login') }}" class="btn btn-outline-light me-2" style="font-family:'futura-book', monospace">Login</a>
+                    <a href="{{ url('register') }}" class="btn btn-outline-warning me-2" style="font-family:'futura-book', monospace">Register</a>
                 @else()
-                    <button type="button" class="btn"
-                        style="color: white; background-color: black !important; border-color: white !important; font-family:'futura-book', monospace">{{ Auth::user()->name }}</button>
-                    <a href="{{ url('logout') }}"class="btn btn-warning"
-                        style="font-family:'futura-book', monospace">Logout</a>
+                    <button type="button" class="btn" style="color: white; background-color: black !important; border-color: white !important; font-family:'futura-book', monospace">{{ Auth::user()->name }}</button>
+                    <a href="{{ url('logout') }}"class="btn btn-warning" style="font-family:'futura-book', monospace">Logout</a>
                 @endif
             </div>
         
